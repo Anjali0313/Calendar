@@ -7,15 +7,14 @@ export const todayMonth = date.getMonth();
 export const todayYear = date.getFullYear();
 
 export const months = [
-    "January", "February", "March", "April", "May", "June",
-    "July", "August", "September", "October", "November", "December"
+    "January", "February", "March", "April", "May", "June","July", "August", "September", "October", "November", "December"
 ];
-
+export const getMonthName = () => months[currentMonth];
 export const getLastDateOfMonth = () => new Date(currentYear, currentMonth + 1, 0).getDate();
 export const getFirstDayOfMonth = () => new Date(currentYear, currentMonth, 1).getDay();
 export const getLastDayOfMonth = () => new Date(currentYear, currentMonth, getLastDateOfMonth()).getDay();
 export const getLastDateOfPrevMonth = () => new Date(currentYear, currentMonth, 0).getDate();
-export const getMonthName = () => months[currentMonth];
+
 
 
 export const updateMonth = (change) => {
